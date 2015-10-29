@@ -12,6 +12,7 @@ class SamplePoint : public Point{
 public:
   SamplePoint() :vehical_id_(DEFAULT_VECHICAL_ID), heading_angle_north_(DEFAULT_HEADING_ANGLE_NORTH),
         speed_(DEAULT_SPEED), loaded_(DEFAULT_LOADED), timestamp_str_(NULL) { Point(); }
+
   SamplePoint(double latitude, double longitude, int vehical_id, double heading_angle_north, double speed, bool loaded, char *timestamp_str);
 
   int vehical_id() { return vehical_id_; }

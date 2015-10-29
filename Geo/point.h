@@ -3,15 +3,17 @@
 
 Class Point {
 public:
-  Point(double latitude = 0, double longitude = 0) : latitude_(latitude), longitude_(longitude) { }
+  Point(double x = 0, double y = 0) : x_(x), y_(y) { }
 
-  double latitude() { return latitude_; }
-  double longitude() { return longitude_; }
+  double x() { return x_; }
+  double y() { return y_; }
 
+  void set_x(double x) { x_ = x; }
+  void set_y(double y) { y_ = y; }
   virtual ~Point() { }
 private:
-  double latitude_;
-  double longitude_;
+  double x_;
+  double y_;
 
 };
 #endif
