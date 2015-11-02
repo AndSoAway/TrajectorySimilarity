@@ -1,4 +1,5 @@
-
+#include "geo_utils.h"
+#include <cmath>
 
 template <typename T>
 inline int GetSign(const T& num) { 
@@ -87,4 +88,10 @@ void SortNumbers(T* num1, T* num2) {
     *num1 = *num2;
     *num2 = tmp;
   }
+}
+
+double CalculateSegLength(Point begin, Point end) {
+  double x = begin.x() - end.x();
+  double y = begin.x() - end.y();
+  return sqrt(x * x + y * y);
 }

@@ -9,8 +9,11 @@ double CalculateCrossProduct(const Point& p1, const Point& begin, const Point& e
 
 double CalculateCrossProduct(double a, double b, double c, double d);
 
+double CalculateSegLength(Point begin, Point end);
+
 bool NearZero(double val);
 
 template <typename T> 
 void SortNumbers(T* num1, T* num2);
+
 #endif
