@@ -4,13 +4,19 @@
 #include "sample_point.h"
 class Trajectory {
 public:
-  Trajectory() 
+  Trajectory(); 
+  virtual ~Trajectory();
+  
+  void PushBackPoint(const SamplePoint& sample_point);
+  void buffer_list();
+  const Buffer* buffer(int index);
 
 private:
   static int tra_counter_;
   int vehicalId;
-  std::vector<SamplePoint> point_list_;
-  std::vector<Buffer> buffer_list_;
+  std::vector<SamplePoint*> point_list_;
+  std::vector<Buffer*> buffer_list_;
+
 
 };
 
