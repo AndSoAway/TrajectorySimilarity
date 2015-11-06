@@ -15,9 +15,9 @@ public:
 
   bool ContainPoint(const Point& point) const;
 
-  bool IntersectSegment(const Point& point1, const Point& point2);
+  bool IntersectSegment(const Point& point1, const Point& point2)const;
 
-  bool IntersectRectangle(const Rectangle& rectangle);
+  bool IntersectRectangle(const Rectangle& rectangle)const;
 
   
   const Point left_bottom() const { return left_bottom_; }

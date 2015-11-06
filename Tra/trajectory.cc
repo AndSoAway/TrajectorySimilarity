@@ -48,3 +48,19 @@ void Trajectory::FixBuffer(int begin) {
    buffer_list_.push_back(new Buffer(point_list_.get(begin), point_list_.get(begin + 1)));
   }
 }
+
+void Trajectory::FindIntersectSegments(const Rectangle& rectangle, vector<Indexes>& intersect_segments, const vector<Indexes>& father_indexes) {
+  for (vector<Indexes>::iterator itor = father_indexes.begin(); itor != father_indexes.end(); itor++) {
+    int begin_point_index = itor->begin;
+    int end_point _index = itor->end;
+    int pre = begin_point_index = begin_point_index;
+    for (int i = begin_point_index; i < end_point_index, i++) {
+      if (rectangle.IntersectSegment(*point_list_.get(i), *point_list_.get(i + 1)) == false) {
+        if (i !=  pre)
+          vector.push_back(Indexes(pre, i));
+        }
+        pre = i + 1;
+      }
+    }
+}
+}

@@ -11,6 +11,9 @@ public:
   void buffer_list();
   const Buffer* buffer(int index);
 
+  void FindIntersectSegments(const Rectangle& rectangle, vector<Indexes>& intersect_segments, const vector<Indexes>& father_indexes)const;
+
+ void FindIntersectSegments(const Rectangle& rectangle, vector<Indexes>& intersect_segments)const;
 private:
 
   inline int NeedFixBuffer();
@@ -20,7 +23,6 @@ private:
   int tra_id_;
   std::vector<SamplePoint*> point_list_;
   std::vector<Buffer*> buffer_list_;
-
 
 };
 
