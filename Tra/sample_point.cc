@@ -8,3 +8,4 @@ SamplePoint::SamplePoint(double latitude, double longitude, int vehical_id, doub
   loaded_ = loaded;
   strncp(timestamp_str_, timestamp_str, sizeof(timestamp_str_));
 }
+
