@@ -21,6 +21,9 @@ public:
   virtual ~QuadtreeNode();
 
   bool ContainTrajectory(const Trajectory&);
+
+  void FindIntersectSegments(const Trajectory& traj, vector<Indexes>& indexes);
+
 private:
   Rectangle* mbr_;
   int id_;

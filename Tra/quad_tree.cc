@@ -12,6 +12,10 @@ bool ContainTrajectory(const Trajectory& traj) {
   return (contain_segments_.find(traj) == contain_segments_.end())
 }
 
+void FindIntersectSegments(const Trajectory& traj, vector<Indexes>& indexes) {
+  
+}
+
 int QuadTree::QuadtreeAdd(const Trajectory& trajectory, QuadtreeNOde* p_root, vector<Indexes> intersect_indexes) {
   if ()
 }
