@@ -12,8 +12,12 @@ public:
   const Buffer* buffer(int index);
 
 private:
-  static int tra_counter_;
-  int vehicalId;
+
+  inline int NeedFixBuffer();
+  void FixBuffer(int index);
+
+  static int tra_counter;
+  int tra_id_;
   std::vector<SamplePoint*> point_list_;
   std::vector<Buffer*> buffer_list_;
 

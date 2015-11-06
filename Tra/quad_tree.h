@@ -15,8 +15,12 @@ class QuatreeNode {
 public:
   explicit QuadtreeNode(const Rectangle& mbr, int depth = 0) : p_parent_(NULL), pp_child_(NULL), depth_(depth) {
     id_ = node_id++;
+    mbr_ = new Rectangle(mbr);
   }
 
+  virtual ~QuadtreeNode();
+
+  bool ContainTrajectory(const Trajectory&);
 private:
   Rectangle* mbr_;
   int id_;
